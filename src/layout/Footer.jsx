@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="flex flex-col gap-y-10 px-6 py-10 text-sm max-w-7xl mx-auto mb-20">
+    <div className="flex flex-col gap-y-15 px-6 py-10 text-sm max-w-7xl mx-auto mb-20">
       <div className="flex justify-between items-center mb-20">
         <h1 className="text-2xl text-[#252B42] font-bold">Bandage</h1>
         <div className="flex gap-x-4">
@@ -54,7 +54,7 @@ export default function Footer() {
               placeholder="Your Email"
               className="px-4 py-3 border border-gray-300 flex-grow" 
             />
-            <button className="bg-[#23A6F0] text-white px-4 py-3 font-semibold text-sm">
+            <button className="bg-[#23A6F0] text-white px-4 py-3 font-semibold text-sm hover:bg-white hover:text-[#23A6F0] hover:border border-[#23A6F0] transition-colors">
               Subscribe
             </button>
           </div>

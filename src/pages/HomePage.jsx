@@ -1,16 +1,15 @@
 import { productImgs } from "../productimgs"
 
-productImgs
 export default function HomePage() {
     return (
         <>
             <div className="relative">
                 <img src="/img/mainimg.png" alt="" />
                 <div className="flex flex-col absolute bottom-80 left-70 gap-y-10">
-                    <p className="text-white text-[20px]">SUMMER 2025</p>
+                    <p className="text-white text-[20px] font-semibold">SUMMER 2025</p>
                     <h1 className="text-white text-[60px] font-bold">NEW COLLECTION</h1>
                     <p className="text-white text-2xl">We know how large objects will act, <br />but things on a small scale</p>
-                    <button className="text-white bg-[#2DC071] px-15 py-5 rounded-sm self-start font-bold text-[20px]">SHOP NOW</button>
+                    <button className="text-white bg-[#2DC071] px-15 py-5 rounded-sm self-start font-bold text-[20px] hover:bg-[#25A05E] transition-colors">SHOP NOW</button>
                 </div>
             </div>
 
@@ -102,7 +101,7 @@ export default function HomePage() {
         <p className="text-white text-xl">We know how large objects will act, We know <br />how large objects will act, We know</p>
         <div className="flex items-center gap-x-10">
             <span className="text-white text-2xl font-bold">$16.48</span>
-            <button className="text-white bg-[#2DC071] px-15 py-5 rounded-sm font-bold text-[20px]">ADD TO CART</button>
+            <button className="text-white bg-[#2DC071] px-15 py-5 rounded-sm font-bold text-[20px] hover:bg-[#25A05E] transition-colors">ADD TO CART</button>
         </div>
     </div>
     <img src="/img/mainimg2.png" alt="" className="absolute bottom-0 right-75"/>
@@ -119,7 +118,7 @@ export default function HomePage() {
             <button className="bg-[#2DC071] text-white font-bold rounded-sm px-12 py-4 hover:bg-[#25A05E] transition-colors">
                 BUY NOW
             </button>
-            <button className="bg-white text-[#2DC071] font-bold border border-[#2DC071] rounded-sm px-12 py-4">
+            <button className="bg-white text-[#2DC071] font-bold border border-[#2DC071] rounded-sm px-12 py-4 hover:bg-[#2DC071] hover:text-white transition-colors">
                 READ MORE
             </button>
         </div>
@@ -146,7 +145,7 @@ export default function HomePage() {
             <h1 className="text-[#252B42] text-xl font-bold leading-tight">Loudest à la Madison #1 <br /> (L'integral)</h1>
             <p className="text-[#737373] text-xs leading-5">We focus on ergonomics and meeting <br /> you where you work. It's only a <br /> keystroke away.</p>
         </div>
-        <div className="flex items-center gap-20 mt-3 text-xs text-[#737373]">
+        <div className="flex items-center gap-20 mt-3 text-xs text-[#737373] mb-5">
             <div className="flex items-center gap-x-2">
                 <img src="/img/calendar.png" alt="" className="h-3 w-3"/>
                 <p>22 April 2021</p>
@@ -174,7 +173,7 @@ export default function HomePage() {
             <h1 className="text-[#252B42] text-xl font-bold leading-tight">Loudest à la Madison #1 <br /> (L'integral)</h1>
             <p className="text-[#737373] text-xs leading-5">We focus on ergonomics and meeting <br /> you where you work. It's only a <br /> keystroke away.</p>
         </div>
-        <div className="flex items-center gap-20 mt-3 text-xs text-[#737373]">
+        <div className="flex items-center gap-20 mt-3 text-xs text-[#737373] mb-5">
             <div className="flex items-center gap-x-2">
                 <img src="/img/calendar.png" alt="" className="h-3 w-3"/>
                 <p>22 April 2021</p>
@@ -202,7 +201,7 @@ export default function HomePage() {
             <h1 className="text-[#252B42] text-xl font-bold leading-tight">Loudest à la Madison #1 <br /> (L'integral)</h1>
             <p className="text-[#737373] text-xs leading-5">We focus on ergonomics and meeting <br /> you where you work. It's only a <br /> keystroke away.</p>
         </div>
-        <div className="flex items-center gap-20 mt-3 text-xs text-[#737373]">
+        <div className="flex items-center gap-20 mt-3 text-xs text-[#737373] mb-5">
             <div className="flex items-center gap-x-2">
                 <img src="/img/calendar.png" alt="" className="h-3 w-3"/>
                 <p>22 April 2021</p>
