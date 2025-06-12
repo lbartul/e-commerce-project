@@ -24,8 +24,3 @@ export default function Top() {
     </div>
   );
 }
-
-
-
-
-//resimlerin ufak isi kaldi//

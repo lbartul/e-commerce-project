@@ -1,11 +1,14 @@
-import NavBar from "./navbar";
-import Top from "./top";
+import Header from "./Header";
+import Footer from "../layout/Footer";
+import HomePage from "./HomePage";
+
 
 export default function App() {
   return (
     <div>
-      <Top />
-      <NavBar />
+      <Header />
+      <HomePage />
+      <Footer />
     </div>
   );
 }
