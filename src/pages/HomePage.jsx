@@ -1,17 +1,10 @@
+import HomeSlider from "../components/Slider"
 import { productImgs } from "../productimgs"
 
 export default function HomePage() {
     return (
         <>
-            <div className="relative">
-                <img src="/img/mainimg.png" alt="" />
-                <div className="flex flex-col absolute bottom-80 left-70 gap-y-10">
-                    <p className="text-white text-[20px] font-semibold">SUMMER 2025</p>
-                    <h1 className="text-white text-[60px] font-bold">NEW COLLECTION</h1>
-                    <p className="text-white text-2xl">We know how large objects will act, <br />but things on a small scale</p>
-                    <button className="text-white bg-[#2DC071] px-15 py-5 rounded-sm self-start font-bold text-[20px] hover:bg-[#25A05E] transition-colors">SHOP NOW</button>
-                </div>
-            </div>
+            <HomeSlider />
 
            <div className="flex flex-col items-center mt-20 mb-15 gap-y-2">
             <h1 className="text-2xl text-[#252B42] font-bold">EDITOR'S PICK</h1>
