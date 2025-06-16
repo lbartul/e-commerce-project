@@ -48,6 +48,18 @@ export default function HomeSlider() {
       >
         ❯
       </button>
+
+      {/* Slider Indicators */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3">
+        {images.map((_, index) => (
+          <div
+            key={index}
+            className={`w-15 h-2 rounded-md transition-all duration-300 ${
+              index === currentIndex ? "bg-white/90" : "bg-white/40"
+            }`}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 }
