@@ -33,12 +33,11 @@ export default function Header() {
                 </div>
                 <div className="flex gap-x-4 items-center relative font-bold text-[#737373]">
                     <Link to="/" className="hover:text-[#252B42]">Home</Link>
+                    <Link to="/shop" className="hover:text-[#252B42]">Shop</Link>
                     <div className="relative">
-                        <div onClick={() => setOpen(!open)} className="flex items-center gap-1 cursor-pointer">
-                            <Link to="/shop" className="hover:text-[#252B42]">Shop</Link>
+                        <div onClick={() => setOpen(!open)} className="flex items-center gap-1 cursor-pointer">    
                             <ChevronDown size={20} />
                         </div>
-
                         {open && (
                             <div className="absolute left-0 top-full mt-3 bg-white shadow-lg rounded z-50 p-6 flex gap-20 w-[400px] h-[272px]">
                                 <div className="flex flex-col gap-y-4">
