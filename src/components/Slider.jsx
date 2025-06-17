@@ -24,16 +24,17 @@ export default function HomeSlider() {
         className="w-full h-full object-cover object-top"
       />
 
-      <div className="flex flex-col absolute bottom-50 left-[10%] gap-y-10">
+      <div className="flex flex-col absolute bottom-50 left-[10%] gap-y-10 text-center md:text-left ">
         <p className="text-white text-[20px] font-semibold">SUMMER 2025</p>
         <h1 className="text-white text-[60px] font-bold">NEW COLLECTION</h1>
         <p className="text-white text-2xl">
           We know how large objects will act, <br />
           but things on a small scale
         </p>
-        <button className="text-white bg-[#2DC071] px-15 py-5 rounded-sm self-start font-bold text-[20px] hover:bg-[#25A05E] transition-colors">
+        <button className="text-white bg-[#2DC071] px-15 py-5 rounded-sm self-center md:self-start font-bold text-[20px] hover:bg-[#25A05E] transition-colors">
           SHOP NOW
         </button>
+
       </div>
 
       <button
@@ -50,7 +51,7 @@ export default function HomeSlider() {
       </button>
 
       {/* Slider Indicators */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 hidden md:flex">
         {images.map((_, index) => (
           <div
             key={index}

@@ -12,8 +12,8 @@ export default function HomePage() {
         </div>
 
 
-        <div className="flex justify-center">
-            <div className="flex flex-row items-center gap-4"> 
+        <div className="flex  justify-center">
+            <div className="flex flex-col items-center gap-4 md:flex-row"> 
                 <div className="relative">
                     <img src="/img/men.png" alt="" />
                     <button className="text-[#252B42] font-bold bg-white pt-3 pb-3 pr-15 pl-15 absolute bottom-10 left-10">MEN</button>  
@@ -44,7 +44,7 @@ export default function HomePage() {
 
 
         <div className="flex flex-col items-center px-10 py-8">
-  <div className="flex justify-center gap-8 mb-8">
+  <div className="flex flex-wrap flex-col gap-8 mb-8 md:flex-row md:justify-center">
     {productImgs.slice(0, 4).map((item, index) => (
       <div className="flex flex-col items-center gap-y-4 w-[239px]" key={index}>
         <img src={item.productimg} alt="" className="w-[239px] h-[427px]" />
@@ -64,8 +64,7 @@ export default function HomePage() {
     ))}
   </div>
 
-  
-  <div className="flex justify-center gap-8">
+  <div className="flex flex-wrap flex-col gap-8 md:flex-row md:justify-center">
     {productImgs.slice(4, 8).map((item, index) => (
       <div className="flex flex-col items-center gap-y-4 w-[239px]" key={index + 4}>
         <img src={item.productimg} alt="" className="w-[239px] h-[427px]" />
@@ -87,36 +86,65 @@ export default function HomePage() {
 </div>
 
 
-<div className="relative bg-[#23856D] w-full h-[711px]">
-    <div className="absolute top-35 left-80 flex flex-col gap-y-10">
-        <p className="text-white text-[20px] font-semibold">SUMMER 2025</p>
-        <h1 className="text-white text-[60px] font-bold">Vita Classic <br />Product</h1>
-        <p className="text-white text-xl">We know how large objects will act, We know <br />how large objects will act, We know</p>
-        <div className="flex items-center gap-x-10">
-            <span className="text-white text-2xl font-bold">$16.48</span>
-            <button className="text-white bg-[#2DC071] px-15 py-5 rounded-sm font-bold text-[20px] hover:bg-[#25A05E] transition-colors">ADD TO CART</button>
-        </div>
+
+<div className="relative bg-[#23856D] w-full h-auto md:h-[711px] flex flex-col items-center md:block px-4 py-10">
+  
+  <div className="flex flex-col gap-y-6 text-center md:text-left md:absolute md:top-[140px] md:left-[320px]">
+    <p className="text-white text-[20px] font-semibold">SUMMER 2025</p>
+    <h1 className="text-white text-[40px] md:text-[60px] font-bold leading-tight">
+      Vita Classic <br className="hidden md:block" /> Product
+    </h1>
+    <p className="text-white text-lg md:text-xl leading-relaxed">
+      We know how large objects will act, We know <br className="hidden md:block" />
+      how large objects will act, We know
+    </p>
+    <div className="flex flex-col items-center gap-y-4 md:flex-row md:items-center md:gap-x-10 mt-4">
+      <span className="text-white text-2xl font-bold">$16.48</span>
+      <button className="text-white bg-[#2DC071] px-8 py-4 rounded-sm font-bold text-[18px] hover:bg-[#25A05E] transition-colors">
+        ADD TO CART
+      </button>
     </div>
-    <img src="/img/mainimg2.png" alt="" className="absolute bottom-0 right-75"/>
+  </div>
+
+  <img
+    src="/img/mainimg2.png"
+    alt="adam"
+    className="w-[300px] mt-10 md:w-auto md:absolute md:bottom-0 md:right-[200px]"
+  />
 </div>
 
 
-<div className="flex items-center justify-center gap-45 mt-1">
-    <img src="/img/mainimg3.png" alt=""  />
-    <div className="flex flex-col gap-10">
-        <p className="text-[#BDBDBD] font-bold">SUMMER 2025</p>
-        <h1 className="text-[#252B42] text-4xl font-bold">Part of the Neural <br /> Universe</h1>
-        <p className="text-[#737373] text-xl">We know how large objects will act, <br /> but things on a small scale</p>
-        <div className="flex gap-4">
-            <button className="bg-[#2DC071] text-white font-bold rounded-sm px-12 py-4 hover:bg-[#25A05E] transition-colors">
-                BUY NOW
-            </button>
-            <button className="bg-white text-[#2DC071] font-bold border border-[#2DC071] rounded-sm px-12 py-4 hover:bg-[#2DC071] hover:text-white transition-colors">
-                READ MORE
-            </button>
-        </div>
+
+<div className="flex flex-col md:flex-row items-center justify-center gap-10 mt-4 md:gap-[180px]">
+  {/* Yazılar */}
+  <div className="flex flex-col gap-6 text-center md:text-left items-center md:items-start order-1 md:order-2">
+    <p className="text-[#BDBDBD] font-bold">SUMMER 2025</p>
+    <h1 className="text-[#252B42] text-3xl md:text-4xl font-bold leading-tight">
+      Part of the Neural <br className="hidden md:block" /> Universe
+    </h1>
+    <p className="text-[#737373] text-lg md:text-xl leading-relaxed">
+      We know how large objects will act, <br className="hidden md:block" />
+      but things on a small scale
+    </p>
+    <div className="flex flex-col gap-4 w-full max-w-[320px] md:flex-row md:gap-4 md:w-auto mt-2">
+      <button className="bg-[#2DC071] text-white font-bold rounded-sm px-8 py-4 hover:bg-[#25A05E] transition-colors">
+        BUY NOW
+      </button>
+      <button className="bg-white text-[#2DC071] font-bold border border-[#2DC071] rounded-sm px-8 py-4 hover:bg-[#2DC071] hover:text-white transition-colors">
+        READ MORE
+      </button>
     </div>
+  </div>
+
+  {/* Resim */}
+  <img
+    src="/img/mainimg3.png"
+    alt=""
+    className="w-[280px] md:w-auto order-2 md:order-1"
+  />
 </div>
+
+
 
 
 <div className="flex flex-col text-center gap-y-5 mt-30">

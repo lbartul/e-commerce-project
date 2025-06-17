@@ -7,7 +7,8 @@ export default function Header() {
 
     return (
         <>
-            <div className="bg-[#252B42] text-white p-4 flex justify-between items-center w-full font-bold">
+            {/* Üst Bilgi Barı */}
+            <div className="bg-[#252B42] text-white p-4 hidden lg:flex justify-between items-center w-full font-bold">
                 <div className="flex gap-x-4 items-center">
                     <img src="/img/phone.png" alt="phone" className="w-4 h-auto" />
                     <p>(225) 555-0118</p>
@@ -27,15 +28,24 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between items-center w-full mt-4 mb-4">
-                <div className="flex gap-x-4 items-center">
-                    <h1 className="text-[#252B42] font-semibold ml-5 text-3xl">Bandage</h1>
+
+            {/* Ana Header */}
+            <div className="flex justify-between items-center w-full mt-4 mb-4 px-4">
+                <h1 className="text-[#252B42] font-semibold text-3xl">Bandage</h1>
+
+                {/* Sağ İkonlar (mobil + desktop) */}
+                <div className="flex gap-x-8 items-center md:hidden">
+                    <img src="/img/resshop.png" alt="user" />
+                    <img src="/img/ressearch.png" alt="search" />
+                    <img src="/img/resmenu.png" alt="cart" />
                 </div>
-                <div className="flex gap-x-4 items-center relative font-bold text-[#737373]">
+
+                {/* Menü (sadece md ve üstü) */}
+                <div className="hidden md:flex gap-x-4 items-center font-bold text-[#737373]">
                     <Link to="/" className="hover:text-[#252B42]">Home</Link>
                     <Link to="/shop" className="hover:text-[#252B42]">Shop</Link>
                     <div className="relative">
-                        <div onClick={() => setOpen(!open)} className="flex items-center gap-1 cursor-pointer">    
+                        <div onClick={() => setOpen(!open)} className="flex items-center gap-1 cursor-pointer">
                             <ChevronDown size={20} />
                         </div>
                         {open && (
@@ -59,13 +69,14 @@ export default function Header() {
                             </div>
                         )}
                     </div>
-
                     <Link to="/about" className="hover:text-[#252B42]">About</Link>
                     <Link to="/blog" className="hover:text-[#252B42]">Blog</Link>
                     <Link to="/contact" className="hover:text-[#252B42]">Contact</Link>
                     <Link to="/pages" className="hover:text-[#252B42]">Pages</Link>
                 </div>
-                <div className="flex gap-x-10 items-center">
+
+                {/* Sağ Login + İkonlar (sadece md ve üstü) */}
+                <div className="hidden md:flex gap-x-10 items-center">
                     <div className="flex gap-x-4 items-center text-[#23A6F0] font-semibold">
                         <img src="/img/usericon.png" alt="" />
                         <a href="">Login</a>
