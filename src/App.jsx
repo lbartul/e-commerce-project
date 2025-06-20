@@ -7,6 +7,7 @@ import ContactPage from "./pages/ContactPage";
 import PagesPage from "./pages/PagesPage";
 
 import Layout from "./layout/Layout";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/pages" element={<PagesPage />} />
+          <Route path="/productdetail" element={<ProductDetailPage />} />
         </Routes>
       </Layout>
     </Router>

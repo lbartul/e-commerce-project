@@ -1,5 +1,6 @@
 import HomeSlider from "../components/Slider"
 import { productImgs } from "../productimgs"
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
     return (
@@ -42,7 +43,7 @@ export default function HomePage() {
             <p className="text-[25] text-[#737373] font-semibold">Problems trying to resolve the conflict between</p>
         </div>
 
-
+     <Link to='/productdetail'>
         <div className="flex flex-col items-center px-10 py-8">
   <div className="flex flex-wrap flex-col gap-8 mb-8 md:flex-row md:justify-center">
     {productImgs.slice(0, 4).map((item, index) => (
@@ -84,6 +85,8 @@ export default function HomePage() {
     ))}
   </div>
 </div>
+</Link>
+
 
 
 

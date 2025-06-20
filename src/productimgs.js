@@ -23,4 +23,28 @@ export const productImgs = [
     {
         productimg: '/img/pimg8.png'
     },
+    {
+        productimg: '/img/bproduct1.png'
+    },
+    {
+        productimg: '/img/bproduct2.png'
+    },
+    {
+        productimg: '/img/bproduct3.png'
+    },
+    {
+        productimg: '/img/bproduct4.png'
+    },
+    {
+        productimg: '/img/bproduct4.png'
+    },
+    {
+        productimg: '/img/bproduct3.png'
+    },
+    {
+        productimg: '/img/bproduct2.png'
+    },
+    {
+        productimg: '/img/bproduct1.png'
+    },
 ]
