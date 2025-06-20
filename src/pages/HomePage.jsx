@@ -43,12 +43,13 @@ export default function HomePage() {
             <p className="text-[25] text-[#737373] font-semibold">Problems trying to resolve the conflict between</p>
         </div>
 
-     <Link to='/productdetail'>
         <div className="flex flex-col items-center px-10 py-8">
   <div className="flex flex-wrap flex-col gap-8 mb-8 md:flex-row md:justify-center">
     {productImgs.slice(0, 4).map((item, index) => (
       <div className="flex flex-col items-center gap-y-4 w-[239px]" key={index}>
+        <Link to='/productdetail'>
         <img src={item.productimg} alt="" className="w-[239px] h-[427px]" />
+        </Link>
         <h2 className="text-[#252B42] font-semibold text-xl">Graphic Design</h2>
         <p className="text-[#737373] font-semibold text-sm">English Department</p>
         <div>
@@ -68,7 +69,9 @@ export default function HomePage() {
   <div className="flex flex-wrap flex-col gap-8 md:flex-row md:justify-center">
     {productImgs.slice(4, 8).map((item, index) => (
       <div className="flex flex-col items-center gap-y-4 w-[239px]" key={index + 4}>
+        <Link to='/productdetail'>
         <img src={item.productimg} alt="" className="w-[239px] h-[427px]" />
+        </Link>
         <h2 className="text-[#252B42] font-semibold text-xl">Graphic Design</h2>
         <p className="text-[#737373] font-semibold text-sm">English Department</p>
         <div>
@@ -85,7 +88,7 @@ export default function HomePage() {
     ))}
   </div>
 </div>
-</Link>
+
 
 
 
