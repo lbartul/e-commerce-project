@@ -1,8 +1,18 @@
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalfStroke, faHeart, faCartShopping, faEye } from "@fortawesome/free-solid-svg-icons";
 import { productImgs } from '../productimgs';
 
 export default function ProductDetailPage() {
+    const [index, setIndex] = useState(0);
+    const images = [
+        "/img/productslider1.png",
+        "/img/productslider2.png"
+    ];
+
+    const goNext = () => setIndex((prev) => (prev + 1) % images.length);
+    const goPrev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
+
     return (
         <div className="max-w-7xl mx-auto items-center">
             <div className="flex gap-x-4 font-semibold items-center">
@@ -10,9 +20,26 @@ export default function ProductDetailPage() {
                 <p className="text-[#BDBDBD]">❯</p>
                 <p className="text-[#BDBDBD]">Shop</p>
             </div>
-            
+
             <div className='flex gap-x-15 mb-30'>
-                <img src="/img/productslider1.png" alt="" />
+                {/* Slider Başlangıç */}
+                <div className="relative">
+                    <img src={images[index]} alt="" className="w-[506px] h-[450px] " />
+                    <button
+                        onClick={goPrev}
+                        className="absolute top-1/2 left-0 transform -translate-y-1/2  px-2 py-1 text-white font-bold "
+                    >
+                        ❮
+                    </button>
+                    <button
+                        onClick={goNext}
+                        className="absolute top-1/2 right-0 transform -translate-y-1/2  px-2 py-1 text-white font-bold "
+                    >
+                        ❯
+                    </button>
+                </div>
+                {/* Slider Bitiş */}
+
                 <div className='flex flex-col gap-y-4'>
                     <h2 className='text-[#252B42] font-semibold'>Floating Phone</h2>
                     <div className='flex items-center'>
@@ -26,12 +53,12 @@ export default function ProductDetailPage() {
                     <p className='font-bold text-[#252B42]'>$1,139.33</p>
                     <div className='font-semibold flex'>
                         <p className='text-[#737373]'>Availability : </p>
-                        <p className='text-[#23A6F0]'>In Stock</p>
+                        <p className='text-[#23A6F0]'>&nbsp;In Stock</p>
                     </div>
                     <p className='text-[#858585]'>Met minim Mollie non desert Alamo est sit cliquey dolor <br />
-                    do met sent. RELIT official consequent door ENIM RELIT Mollie. <br /> 
-                    Excitation venial consequent sent nostrum met.</p>
-                    <div className="w-[35%] h-px bg-gray-300 my-4"></div>
+                        do met sent. RELIT official consequent door ENIM RELIT Mollie. <br />
+                        Excitation venial consequent sent nostrum met.</p>
+                    <div className="w-[100%] h-px bg-gray-300 my-4"></div>
                     <div className="flex gap-x-2 mb-15">
                         <div className="w-6 h-6 rounded-full bg-[#23A6F0] border border-gray-300"></div>
                         <div className="w-6 h-6 rounded-full bg-[#23856D] border border-gray-300"></div>
@@ -42,11 +69,10 @@ export default function ProductDetailPage() {
                         <button className='bg-[#23A6F0] text-white font-bold rounded-sm px-6 py-3'>Select Options</button>
                         <FontAwesomeIcon icon={faHeart} className='text-[#252B42]' />
                         <FontAwesomeIcon icon={faCartShopping} className='text-[#252B42]' />
-                        <FontAwesomeIcon icon={faEye} className='text-[#00000]' />
+                        <FontAwesomeIcon icon={faEye} className='text-[#000000]' />
                     </div>
                 </div>
             </div>
-
 
             <div className='flex items-center justify-center text-[#737373] font-semibold gap-x-16 mb-25'>
                 <p>Description</p>
@@ -56,29 +82,28 @@ export default function ProductDetailPage() {
 
             <div className='flex gap-x-30'>
                 <img src="/img/producti.png" alt="" />
-
                 <div className='flex flex-col gap-y-6 font-semibold'>
                     <h1 className='font-bold text-3xl text-[#252B42]'>the quick fox jumps over</h1>
                     <p className='text-[#737373]'>
-                    Met minim Mollie non desert Alamo est sit <br />
-                    cliquey dolor do met sent. RELIT official <br />
-                    consequent door ENIM RELIT Mollie. <br />
-                    Excitation venial consequent sent nostrum <br />
-                    met.
+                        Met minim Mollie non desert Alamo est sit <br />
+                        cliquey dolor do met sent. RELIT official <br />
+                        consequent door ENIM RELIT Mollie. <br />
+                        Excitation venial consequent sent nostrum <br />
+                        met.
                     </p>
                     <p className='text-[#737373]'>
-                    Met minim Mollie non desert Alamo est sit <br />
-                    cliquey dolor do met sent. RELIT official <br />
-                    consequent door ENIM RELIT Mollie. <br />
-                    Excitation venial consequent sent nostrum <br />
-                    met.
+                        Met minim Mollie non desert Alamo est sit <br />
+                        cliquey dolor do met sent. RELIT official <br />
+                        consequent door ENIM RELIT Mollie. <br />
+                        Excitation venial consequent sent nostrum <br />
+                        met.
                     </p>
                     <p className='text-[#737373]'>
-                    Met minim Mollie non desert Alamo est sit <br />
-                    cliquey dolor do met sent. RELIT official <br />
-                    consequent door ENIM RELIT Mollie. <br />
-                    Excitation venial consequent sent nostrum <br />
-                    met.
+                        Met minim Mollie non desert Alamo est sit <br />
+                        cliquey dolor do met sent. RELIT official <br />
+                        consequent door ENIM RELIT Mollie. <br />
+                        Excitation venial consequent sent nostrum <br />
+                        met.
                     </p>
                 </div>
 
@@ -96,43 +121,37 @@ export default function ProductDetailPage() {
                         <p><span>❯</span> the quick fox jumps over the lazy dog</p>
                     </div>
                 </div>
-                </div>
+            </div>
+
             <div className="max-w-7xl mx-auto px-4 py-10">
-  <h2 className="text-2xl font-bold text-[#252B42] mb-12 mt-25">BESTSELLER PRODUCTS</h2>
+                <h2 className="text-2xl font-bold text-[#252B42] mb-12 mt-25">BESTSELLER PRODUCTS</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {productImgs.slice(8, 16).map((item, index) => (
+                        <div key={index} className="bg-white shadow-sm rounded-md overflow-hidden">
+                            <img src={item.productimg} alt="" />
+                            <div className="p-4">
+                                <h3 className="text-[#252B42] font-bold mb-1">Graphic Design</h3>
+                                <p className="text-[#737373] text-sm mb-2 font-semibold">English Department</p>
+                                <div className="flex gap-x-2">
+                                    <span className="text-[#BDBDBD] font-bold text-sm">$16.48</span>
+                                    <span className="text-[#23856D] font-semibold text-sm">$6.48</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    {productImgs.slice(8, 16).map((item, index) => (
-      <div key={index} className="bg-white shadow-sm rounded-md overflow-hidden">
-        <img src={item.productimg} alt="" />
-
-        
-        <div className="p-4">
-          <h3 className="text-[#252B42] font-bold  mb-1">Graphic Design</h3>
-          <p className="text-[#737373] text-sm mb-2 font-semibold">English Department</p>
-          <div className="flex gap-x-2">
-            <span className="text-[#BDBDBD] font-bold text-sm">$16.48</span>
-            <span className="text-[#23856D] font-semibold text-sm">$6.48</span>
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-
-  <div className="max-w-7xl mx-auto mt-35 mb-24">
-  <div className="flex items-center gap-x-15">
-    <img src="/img/hooli.png" alt="" />
-    <img src="/img/lyft.png" alt="" />
-    <img src="/img/logog.png" alt="" />
-    <img src="/img/stripe.png" alt="" />
-    <img src="/img/amazon.png" alt="" />
-    <img src="/img/reddit.png" alt="" />
-  </div>
-</div>
-
-</div>
-
+                <div className="max-w-7xl mx-auto mt-35 mb-24">
+                    <div className="flex items-center gap-x-15">
+                        <img src="/img/hooli.png" alt="" />
+                        <img src="/img/lyft.png" alt="" />
+                        <img src="/img/logog.png" alt="" />
+                        <img src="/img/stripe.png" alt="" />
+                        <img src="/img/amazon.png" alt="" />
+                        <img src="/img/reddit.png" alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
-
-
