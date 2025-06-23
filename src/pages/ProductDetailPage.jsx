@@ -22,7 +22,7 @@ export default function ProductDetailPage() {
             </div>
 
             <div className='flex gap-x-15 mb-30'>
-                {/* Slider Başlangıç */}
+                
                 <div className="relative">
                     <img src={images[index]} alt="" className="w-[506px] h-[450px] " />
                     <button
@@ -38,7 +38,7 @@ export default function ProductDetailPage() {
                         ❯
                     </button>
                 </div>
-                {/* Slider Bitiş */}
+                
 
                 <div className='flex flex-col gap-y-4'>
                     <h2 className='text-[#252B42] font-semibold'>Floating Phone</h2>

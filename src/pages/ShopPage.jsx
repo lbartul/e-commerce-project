@@ -26,14 +26,14 @@ export default function ShopPage() {
 
 
       <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto mt-[100px] mb-12 px-4 md:px-0">
-  {/* Mobile: Showing (üstte) - Desktop: Sol */}
+  
   <div className="w-full md:w-auto text-center md:text-left mb-4 md:mb-0">
     <p className="text-[#737373] font-semibold">
       Showing all 12 results
     </p>
   </div>
 
-  {/* Mobile: Views (ortada) - Desktop: Orta */}
+  
   <div className="flex items-center justify-center gap-x-6 mb-4 md:mb-0">
     <p className="text-[#737373] font-semibold">Views:</p>
     <div className="flex gap-2">
@@ -42,7 +42,7 @@ export default function ShopPage() {
     </div>
   </div>
 
-  {/* Mobile: Filter alanı (altta) - Desktop: Sağ */}
+  
   <div className="flex flex-col md:flex-row items-center w-full md:w-auto gap-2">
     <select className="border border-gray-300 rounded px-6 py-3 max-w-[200px] md:w-auto text-center md:text-left">
       <option value="default">Popularity</option>

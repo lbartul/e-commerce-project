@@ -142,7 +142,7 @@ export default function HomePage() {
     </div>
   </div>
 
-  {/* Resim */}
+  
   <img
     src="/img/mainimg3.png"
     alt=""

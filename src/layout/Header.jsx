@@ -7,7 +7,7 @@ export default function Header() {
 
     return (
         <>
-            {/* Üst Bilgi Barı */}
+            
             <div className="bg-[#252B42] text-white p-4 hidden lg:flex justify-between items-center w-full font-bold">
                 <div className="flex gap-x-4 items-center">
                     <img src="/img/phone.png" alt="phone" className="w-4 h-auto" />
@@ -29,11 +29,11 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Ana Header */}
+            
             <div className="flex justify-between items-center w-full mt-4 mb-4 px-4">
                 <h1 className="text-[#252B42] font-semibold text-3xl z-50">Bandage</h1>
 
-                {/* Sağ İkonlar (mobil + desktop) */}
+                
                 <div className="flex gap-x-8 items-center md:hidden">
                     <img src="/img/resshop.png" alt="user" />
                     <img src="/img/ressearch.png" alt="search" />
@@ -69,7 +69,7 @@ export default function Header() {
                 )}
 
 
-                {/* Menü (sadece md ve üstü) */}
+                
                 <div className="hidden md:flex gap-x-4 items-center font-bold text-[#737373]">
                     <Link to="/" className="hover:text-[#252B42]">Home</Link>
                     <Link to="/shop" className="hover:text-[#252B42]">Shop</Link>
@@ -104,7 +104,7 @@ export default function Header() {
                     <Link to="/pages" className="hover:text-[#252B42]">Pages</Link>
                 </div>
 
-                {/* Sağ Login + İkonlar (sadece md ve üstü) */}
+                
                 <div className="hidden md:flex gap-x-10 items-center">
                     <div className="flex gap-x-4 items-center text-[#23A6F0] font-semibold">
                         <img src="/img/usericon.png" alt="" />
