@@ -87,7 +87,7 @@ export default function ShopPage() {
           <span className="text-[#BDBDBD] font-bold mr-2">$16.48</span>
           <span className="text-[#23856D] font-semibold">$6.48</span>
         </div>
-        <div className="flex gap-x-2 mt-2">
+        <div className="flex gap-x-2 mt-2 mb-2">
           <div className="w-5 h-5 rounded-full bg-[#23A6F0] border border-gray-300"></div>
           <div className="w-5 h-5 rounded-full bg-[#23856D] border border-gray-300"></div>
           <div className="w-5 h-5 rounded-full bg-[#E77C40] border border-gray-300"></div>
