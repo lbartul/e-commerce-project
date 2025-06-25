@@ -21,10 +21,10 @@ export default function ProductDetailPage() {
     <p className="text-[#BDBDBD]">Shop</p>
   </div>
 
-  {/* SLIDER + DETAY */}
+  
   <div className='flex flex-col lg:flex-row gap-y-10 lg:gap-x-15 mb-30 items-center lg:items-start'>
 
-    {/* SLIDER */}
+    
     <div className="flex flex-col items-center gap-y-4">
       <div className="relative">
         <img src={images[index]} alt="" className="w-[300px] h-[270px] sm:w-[400px] sm:h-[350px] lg:w-[506px] lg:h-[450px]" />
@@ -56,7 +56,7 @@ export default function ProductDetailPage() {
       </div>
     </div>
 
-    {/* DETAY */}
+    
     <div className='flex flex-col gap-y-4 items-center lg:items-start text-left lg:text-left'>
       <h2 className='text-[#252B42] font-semibold text-xl'>Floating Phone</h2>
       <div className='flex items-center'>
