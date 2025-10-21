@@ -5,7 +5,7 @@ import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import PagesPage from "./pages/PagesPage";
-
+import TeamPage from "./pages/TeamPage";
 import Layout from "./layout/Layout";
 import ProductDetailPage from "./pages/ProductDetailPage";
 
@@ -21,6 +21,7 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/pages" element={<PagesPage />} />
           <Route path="/productdetail" element={<ProductDetailPage />} />
+          <Route path="/team" element={<TeamPage />} />
         </Routes>
       </Layout>
     </Router>
