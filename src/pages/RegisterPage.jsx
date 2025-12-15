@@ -1,12 +1,14 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export default function RegisterPage() {
+  const navigate = useNavigate();
+
   const { 
     register, 
     handleSubmit, 
     watch,
-    formState: { errors }
+    formState: { errors, isSubmitting }
   } = useForm({
     defaultValues: {
       role_id: "customer"
@@ -16,9 +18,11 @@ export default function RegisterPage() {
 
   const selectedRole = watch("role_id");
 
-  const onSubmit = (data) => {
-    console.log("Form Başarıyla Doğrulandı, Veriler:", data);
-    alert("Validasyon başarılı! Konsola bakabilirsin.");
+  const onSubmit = async (data) => {
+    console.log("Sunucuya Giden Veri:", data);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    alert("Kayıt Başarılı! Giriş sayfasına yönlendiriliyorsunuz.");
+    navigate("/login");
   };
 
   return (
@@ -34,7 +38,7 @@ export default function RegisterPage() {
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          
+
           <div>
             <label className="block text-sm font-medium text-gray-700">Name</label>
             <input 
@@ -182,9 +186,10 @@ export default function RegisterPage() {
 
           <button 
             type="submit"
-            className="w-full px-4 py-2 font-bold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-200"
+            disabled={isSubmitting}
+            className="w-full px-4 py-2 font-bold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-200 disabled:bg-gray-400"
           >
-            Sign Up
+            {isSubmitting ? "İşleniyor..." : "Sign Up"}
           </button>
 
         </form>
